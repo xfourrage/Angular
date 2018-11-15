@@ -1,0 +1,15 @@
+<div>
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': likeNumber>dislikeNumber,
+'list-group-item-danger': dislikeNumber>likeNumber}"
+class="list-group-item" >
+    
+    <h2>{{title}} <span class="postdate"> créé le {{created_at | date : 'short'}}</span></h2>
+    <p>{{content}}</p>
+    <button class="btn btn-success"  (click)="addLike()">likes: {{likeNumber}}</button>
+    <button class="btn btn-danger" (click)="addDislike()">dislikes: {{dislikeNumber}}</button>
+
+  </li>
+
+</div>
+ 
